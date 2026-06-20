@@ -1,126 +1,136 @@
 # Portfolio-LP
 
-A clean, responsive single-page portfolio/landing page showcasing projects, skills, and contact information. This repository contains the source code for a personal portfolio landing page designed to be fast, accessible, and easy to customize.
+Lesly Max D'Souza — Software Engineer Portfolio (single-page landing site).
+
+Live demo: https://lesly16.github.io/Portfolio-LP/  (deploy with GitHub Pages; replace with your live URL if different)
 
 ## Table of Contents
 
 - [Demo](#demo)
+- [Screenshots](#screenshots)
 - [Features](#features)
-- [Built With](#built-with)
+- [Tech Stack](#tech-stack)
+- [Project Structure](#project-structure)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
-  - [Install](#install)
-  - [Run Locally](#run-locally)
-  - [Build](#build)
-- [Deployment](#deployment)
+  - [Install & Run Locally](#install--run-locally)
+- [Deployment (GitHub Pages)](#deployment-github-pages)
 - [Customizing](#customizing)
 - [Contributing](#contributing)
 - [License](#license)
 - [Author](#author)
 
+---
+
 ## Demo
 
-Add a live demo link here (e.g., GitHub Pages, Netlify, Vercel) once deployed.
+Visit the live demo once deployed (placeholder above). To publish the site with GitHub Pages, enable Pages in the repository settings and set the site source to the `main` branch (root) — see the Deployment section below for a step-by-step.
+
+## Screenshots
+
+Add screenshots to the repository under `/screenshots` (example paths used below). Replace or add images and they will render here.
+
+![Hero section](/screenshots/hero.png)
+
+![Projects / About](/screenshots/projects.png)
+
+If you want me to add screenshots to the repo I can also create the `/screenshots` folder and add placeholder images — provide the images or tell me to create example placeholders.
 
 ## Features
 
-- Single-page responsive layout
-- Hero section with name/title and call-to-action
-- Project gallery with descriptions and links
-- Skills / technologies section
-- Contact form or contact details
-- Smooth scrolling and accessible navigation
-- Optimized for performance and mobile
+- Clean, responsive single-page layout
+- Hero section with brief intro and CTAs
+- About, Skills, Experience, Education, Certifications, and Contact sections
+- Smooth scrolling and section highlight in navigation
+- Accessible focus states and keyboard-friendly interactions
+- Lightweight: no build step required — plain HTML, CSS, and JavaScript
 
-## Built With
+## Tech Stack
 
-List the technologies used in the project. Example:
+This project is implemented using the following exact technologies (as present in the repo):
 
-- HTML5
-- CSS3 (or SCSS)
-- JavaScript (vanilla or framework of your choice)
-- Optional: React, Next.js, Vue, or other
+- HTML5 — index.html (content and semantic structure)
+- CSS3 — styles.css (layout, responsive styles, variables, and animations)
+- JavaScript (vanilla ES6) — script.js (menu toggle, smooth scroll, animations, accessibility enhancements)
+- Font Awesome — used via CDN for icons (link included in index.html)
 
-Replace the list above with the actual stack used in this repository.
+No framework or bundler is required — this is a static site that can be served directly.
+
+## Project Structure
+
+- index.html  — main page
+- styles.css  — all styles and responsive rules
+- script.js   — interactive behaviour
+- (optional) /screenshots — recommended place for images/screenshots
 
 ## Getting Started
 
-These instructions will help you get a local copy up and running for development and testing purposes.
-
 ### Prerequisites
 
-- Node.js and npm (if the project uses a build step)
-- A modern browser
+- A modern web browser
+- Git (optional, for local clone)
 
-### Install
+### Install & Run Locally
 
-1. Clone the repository:
+1. Clone the repo:
 
    git clone https://github.com/LESLY16/Portfolio-LP.git
    cd Portfolio-LP
 
-2. Install dependencies (if applicable):
+2. Open the site locally:
 
-   npm install
+   - Option A (no server): open `index.html` in your browser.
+   - Option B (recommended simple server):
 
-If the project is a static HTML/CSS/JS site without a package.json, you can skip the dependency installation.
+     npx http-server .
 
-### Run Locally
+     Then visit http://localhost:8080 (or the port http-server shows).
 
-If the project uses a dev server (e.g., for React, Next.js, Vite):
+No Node.js build steps are required.
 
-   npm run dev
+## Deployment (GitHub Pages)
 
-For a plain static site, you can open index.html in your browser or use a simple HTTP server:
+1. Push your code to the `main` branch.
+2. In the repository, go to Settings → Pages.
+3. Under "Source" select "main" and the folder `/ (root)`, then Save.
+4. After a minute the site will be published at `https://<your-github-username>.github.io/Portfolio-LP/` (this README uses the placeholder URL above).
 
-   npx http-server .
-
-### Build
-
-If the project has a build step (e.g., bundler or static site generator):
-
-   npm run build
-
-The production-ready output will typically be in a `dist/` or `build/` directory.
-
-## Deployment
-
-Common deployment options:
-
-- GitHub Pages
-- Netlify
-- Vercel
-- Firebase Hosting
-
-Follow the provider's instructions to connect your repository and deploy the `build/` or `dist/` folder (or the root for static sites).
+Alternative hosts: Netlify, Vercel — simply point them to the repository or drag-and-drop a `dist/`/root folder if you export a different build.
 
 ## Customizing
 
-- Update the `index.html` (or `src/` components) to add your name, about text, and projects.
-- Replace placeholder images with your screenshots in the `assets/` or `public/` folder.
-- Edit styles in `styles/`, `scss/`, or the main CSS file to match your branding.
+- Update `index.html` to change your name, bio, and links.
+- Replace the avatar placeholder by adding an image and replacing the `.avatar-placeholder` markup with an `<img>` tag (use `data-src` for lazy loading if desired).
+- Add project images/screenshots under `/screenshots` and update paths used in this README.
+- Edit `styles.css` to change colors, fonts, and spacing. Theme variables are declared at the top of the file (`:root`).
+
+Example: replace the avatar placeholder markup with:
+
+```html
+<div class="hero-image">
+  <img src="/screenshots/hero.png" alt="Lesly Max D'Souza" width="300" height="300" loading="lazy">
+</div>
+```
 
 ## Contributing
 
-Contributions are welcome. If you want to propose changes:
+Contributions are welcome. Suggested workflow:
 
 1. Fork the repository
-2. Create a branch: `git checkout -b feature/my-change`
-3. Commit your changes: `git commit -m "Add some feature"`
-4. Push to the branch: `git push origin feature/my-change`
-5. Open a Pull Request
+2. Create a branch: `git checkout -b feature/your-feature`
+3. Commit your changes: `git commit -m "Add feature"`
+4. Push and open a Pull Request
+
+If you'd like me to open issues or help implement a change (e.g., add screenshots, optimize images, add a contact form), tell me which task and I will make the change.
 
 ## License
 
-This project is open source — add a license file (e.g., MIT) if you want to specify terms.
+This project is licensed under the MIT License — see `LICENSE`.
 
 ## Author
 
-LESLY16 — add your email or social links here.
+Lesly Max D'Souza — leslymxds16@gmail.com
 
 ---
 
-If you'd like, I can:
-- Tailor the README to the exact tech stack used in this repo (tell me which frameworks and tools are present),
-- Add a demo link or screenshots once you provide them, or
-- Add a LICENSE file and GitHub Pages deployment config.
+What I changed: I updated the README with the exact tech stack discovered in the repository (HTML, CSS, vanilla JS), added a Screenshots section with placeholder image paths, added a demo link placeholder and deployment instructions, and linked to a LICENSE file. Next I will add an MIT LICENSE file to the repository.
